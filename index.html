@@ -21,9 +21,8 @@
             align-items: center;
             gap: 10px;
             color: #fff;
-            max-width: 300px; /* Limit the width to fit smaller screens */
+            max-width: 300px; /* Limit the width to fit larger screens */
             padding: 20px;
- margin-left: -160px; /* Adjust this value to move the fields to the left */
         }
 
         label {
@@ -38,6 +37,7 @@
             color: #fff;
             background-color: transparent;
             text-align: center;
+            max-width: 200px; /* Limit the width for larger screens */
         }
 
         button {
@@ -59,6 +59,10 @@
                 max-width: 100%; /* Expand to full width on smaller screens */
                 margin-left: 0; /* Remove the left margin on smaller screens */
             }
+
+            input[type="text"] {
+                max-width: 100%; /* Adjust the width for smaller screens */
+            }
         }
     </style>
 </head>
@@ -67,7 +71,7 @@
         <label for="email">Email:</label>
         <input type="text" id="email" value="new id will come tomorrow" readonly>
         <label for="password">Password:</label>
-        <input type="text" id="password" value="passwordddd433" readonly>
+        <input type="text" id="password" value="password" readonly>
         <button onclick="copyToClipboard('email')">Copy Email</button>
         <button onclick="copyToClipboard('password')">Copy Password</button>
     </div>
